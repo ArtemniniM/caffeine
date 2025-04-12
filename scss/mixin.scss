@@ -1,0 +1,26 @@
+@mixin button($width, $height, $bg-c, $b-r, $font, $color) {
+  width: $width;
+  height: $height;
+  background-color: $bg-c;
+  border-radius: $b-r;
+  font: $font;
+  color: $color;
+  display: block;
+  border: none;
+  box-shadow: 0px 6px 12px 0px #f9c06a38;
+}
+@mixin img($width, $height, $bg-s, $bg-i) {
+  width: $width;
+  height: $height;
+  background-size: $bg-s;
+  background-image: $bg-i;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@mixin text($ff, $fw, $fs, $lh, $cl) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  color: $cl;
+}
