@@ -9,9 +9,12 @@
 
 $main-background-color: white;
 $main-font-style: 500 14px "Playfair Display";
-.main {
+
+main {
+  width: 100%;
   background-color: $main-background-color;
 }
+
 .main-img {
   @include img(100%, 100%, cover, url(../images/main-img.png));
 }
