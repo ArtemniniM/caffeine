@@ -1,0 +1,17 @@
+%flex-spb-ai {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  %flex-col-ai-js {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  $main-background-color: white;
+  $main-font-style: 500 14px "Playfair Display";
+  $font-h-color: #603809;
+  $font-p-color: #707070;
+  $button-height: 48px;

@@ -1,15 +1,6 @@
 @import "./mixin.scss";
 @import "./basic.scss";
-
-%flex-spb-ai {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-$main-background-color: white;
-$main-font-style: 500 14px "Playfair Display";
-
+@import "./variables.scss";
 .main-img {
   @include img(100%, 100%, cover, url(../images/main-img.png));
 }
@@ -21,20 +12,20 @@ header {
     margin: auto;
     @extend %flex-spb-ai;
     h4 {
-      @include text("Clicker Script", 400, 35px, 100%, #ffffff);
+      @include text("Clicker Script", 400, 35px, 100%, #ffffff, start);
     }
     nav {
       @extend %flex-spb-ai;
       gap: 40px;
       p {
-        @include text("Playfair Display", 500, 14px, 100%, #ffffff);
+        @include text("Playfair Display", 500, 14px, 100%, #ffffff, start);
       }
     }
     :nth-child(3) {
       @extend %flex-spb-ai;
       gap: 35px;
       p {
-        @include text("Playfair Display", 500, 14px, 100%, #ffffff);
+        @include text("Playfair Display", 500, 14px, 100%, #ffffff, start);
         text-decoration: underline;
         text-decoration-style: solid;
       }
@@ -67,13 +58,13 @@ header {
       flex-direction: column;
       gap: 30px;
       h3 {
-        @include text("Playfair Display", 500, 22px, 100%, #ffffff);
+        @include text("Playfair Display", 500, 22px, 100%, #ffffff, start);
       }
       h1 {
-        @include text("Clicker Script", 400, 220px, 100%, #ffffff);
+        @include text("Clicker Script", 400, 220px, 100%, #ffffff, start);
       }
       p {
-        @include text("Playfair Display", 400, 20px, 34px, #ffffff);
+        @include text("Playfair Display", 400, 20px, 34px, #ffffff, start);
       }
       button {
         @include button(
@@ -88,57 +79,263 @@ header {
     }
   }
 }
+main {
+  // coffee-cup
 
-// coffee-cup
+  .coffee-cup {
+    padding: 150px 40px;
+    width: 100%;
+    .wrapper {
+      max-width: 1180px;
+      margin: auto;
+      @extend %flex-spb-ai;
+      .left {
+        max-width: 585px;
+        h2 {
+          @include text(
+            "Playfair Display",
+            700,
+            54px,
+            100%,
+            $font-h-color,
+            start
+          );
+        }
+        p {
+          padding: 29px 0;
+          @include text(
+            "Playfair Display",
+            400,
+            20px,
+            34px,
+            $font-p-color,
+            start
+          );
+        }
+        button {
+          @include button(
+            134px,
+            48px,
+            #f9c06a,
+            24px,
+            700 16px "Playfair Display",
+            #1e1e1e
+          );
+        }
+      }
+      .right {
+        @include img(500px, 484px, cover, url(../images/coffee-cup.svg));
+      }
+    }
+  }
 
-.coffee-cup {
-  padding: 150px 40px;
-  width: 100%;
-  .wrapper {
-    max-width: 1180px;
-    margin: auto;
-    @extend %flex-spb-ai;
-    .left {
-      max-width: 585px;
+  // coffee-styles
+
+  .coffee-styles {
+    width: 100%;
+    padding: 0 40px;
+    .wrapper {
+      max-width: 1180px;
+      margin: auto;
+
       h2 {
-        @include text("Playfair Display", 700, 54px, 100%, #603809);
-      }
-      p {
-        padding: 29px 0;
-        @include text("Playfair Display", 400, 20px, 34px, #707070);
-      }
-      button {
-        @include button(
-          134px,
-          48px,
-          #f9c06a,
-          24px,
-          700 16px "Playfair Display",
-          #1e1e1e
+        @include text(
+          "Playfair Display",
+          700,
+          54px,
+          100%,
+          $font-h-color,
+          center
         );
       }
-    }
-    .right {
-      @include img(500px, 484px, cover, url(../images/coffee-cup.svg));
-    }
-  }
-}
+      p {
+        padding: 16px 0 32px;
 
-// coffee-styles
+        @include text(
+          "Playfair Display",
+          400,
+          20px,
+          34px,
+          $font-p-color,
+          center
+        );
+      }
+      .styles {
+        @extend %flex-spb-ai;
+        .card {
+          max-width: 280px;
+          height: 28vh;
+          background-color: #fff9f1;
+          border: 1px solid #f9c06a6b;
+          position: relative;
+          .img1 {
+            margin-bottom: 14px;
+            @include img(280px, 222px, cover, url(../images/Rectangle\ 7.png));
+          }
+          .img2 {
+            margin-bottom: 14px;
+            @include img(280px, 222px, cover, url(../images/Rectangle\ 9.png));
+          }
+          .img3 {
+            margin-bottom: 14px;
+            @include img(280px, 222px, cover, url(../images/Rectangle\ 11.png));
+          }
+          .img4 {
+            margin-bottom: 14px;
+            @include img(280px, 222px, cover, url(../images/Rectangle\ 13.png));
+          }
+          h3 {
+            @include text(
+              "Playfair Display",
+              700,
+              22px,
+              100%,
+              $font-h-color,
+              center
+            );
+          }
+          p {
+            padding: 15px 0;
+            @include text("Playfair Display", 400, 16px, 100%, #1e1e1e, center);
+          }
+          h4 {
+            @include text(
+              "Playfair Display",
+              700,
+              18px,
+              100%,
+              $font-h-color,
+              center
+            );
+          }
+          button {
+            position: absolute;
+            left: 73px;
+            bottom: -25px;
+            @include button(
+              134px,
+              48px,
+              #f9c06a,
+              24px,
+              700 16px "Playfair Display",
+              #1e1e1e
+            );
+          }
+        }
+      }
+    }
+  }
 
-.coffee-styles {
-  max-width: 1180px;
-  margin: auto;
-  h2 {
-    text-align: center;
-    @include text("Playfair Display", 700, 54px, 100%, #603809);
-  }
-  p {
-    padding: 16px 0 32px;
-    text-align: center;
-    @include text("Playfair Display", 400, 20px, 34px, #707070);
-  }
-  .styles {
-   
+  // advantages
+
+  .advantages {
+    width: 100%;
+    padding: 90px 40px;
+    .wrapper {
+      max-width: 1180px;
+      margin: auto;
+
+      h2 {
+        @include text(
+          "Playfair Display",
+          700,
+          54px,
+          100%,
+          $font-h-color#,
+          center
+        );
+      }
+      p {
+        padding: 16px 0 32px;
+        @include text(
+          "Playfair Display",
+          400,
+          20px,
+          34px,
+          $font-p-color,
+          center
+        );
+      }
+      .items {
+        @extend %flex-spb-ai;
+        h3 {
+          padding: 25px 0 15px;
+          @include text(
+            "Playfair Display",
+            700,
+            28px,
+            100%,
+            $font-h-color,
+            center
+          );
+        }
+        h5 {
+          @include text(
+            "Playfair Display",
+            400,
+            20px,
+            25px,
+            $font-p-color,
+            center
+          );
+        }
+        .supreme {
+          @extend %flex-col-ai-js;
+          width: 280px;
+          height: 284px;
+          background-color: #ffeed8;
+          .img {
+            @include img(88px, 88px, cover, url(../images/coffee-beans\ 1.png));
+          }
+        }
+        .quality {
+          @extend %flex-col-ai-js;
+          width: 280px;
+          height: 284px;
+          background-color: #fff9f1;
+          border: 1px solid #f9c06a6b;
+          .img {
+            @include img(88px, 88px, cover, url(../images/badge\ 1.png));
+          }
+        }
+        .extraordinary {
+          @extend %flex-col-ai-js;
+          width: 280px;
+          height: 284px;
+          background-color: #fff9f1;
+          border: 1px solid #f9c06a6b;
+          .img {
+            @include img(88px, 88px, cover, url(../images/coffee-cup\ 1.png));
+          }
+        }
+        .price {
+          @extend %flex-col-ai-js;
+          width: 280px;
+          height: 284px;
+          background-color: #fff9f1;
+          border: 1px solid #f9c06a6b;
+          .img {
+            @include img(88px, 88px, cover, url(../images/best-price\ 1.png));
+          }
+        }
+      }
+    }
+    p:nth-child(4) {
+      padding: 32px 0 24px;
+    }
+    span {
+      @include text("Playfair Display", 700, 30px, 100%, $font-h-color, center);
+    }
+    button {
+      margin: auto;
+      @include button(
+        134px,
+        48px,
+        #f9c06a,
+        24px,
+        700 16px "Playfair Display",
+        #1e1e1e
+      );
+    }
   }
 }

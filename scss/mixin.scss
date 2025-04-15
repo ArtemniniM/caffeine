@@ -17,10 +17,13 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-@mixin text($ff, $fw, $fs, $lh, $cl) {
+@mixin text($ff, $fw, $fs, $lh, $cl, $text-a) {
   font-family: $ff;
   font-weight: $fw;
   font-size: $fs;
   line-height: $lh;
   color: $cl;
+  text-align: $text-a;
+}
+@mixin coffee-styles-card($wdh, $hei) {
 }
