@@ -10,11 +10,6 @@
 $main-background-color: white;
 $main-font-style: 500 14px "Playfair Display";
 
-main {
-  width: 100%;
-  background-color: $main-background-color;
-}
-
 .main-img {
   @include img(100%, 100%, cover, url(../images/main-img.png));
 }
@@ -109,6 +104,7 @@ header {
         @include text("Playfair Display", 700, 54px, 100%, #603809);
       }
       p {
+        padding: 29px 0;
         @include text("Playfair Display", 400, 20px, 34px, #707070);
       }
       button {
@@ -123,8 +119,26 @@ header {
       }
     }
     .right {
-      max-width: 500px;
-      @include img(100%, 100%, cover, url(../images/coffee-cup.svg));
+      @include img(500px, 484px, cover, url(../images/coffee-cup.svg));
     }
+  }
+}
+
+// coffee-styles
+
+.coffee-styles {
+  max-width: 1180px;
+  margin: auto;
+  h2 {
+    text-align: center;
+    @include text("Playfair Display", 700, 54px, 100%, #603809);
+  }
+  p {
+    padding: 16px 0 32px;
+    text-align: center;
+    @include text("Playfair Display", 400, 20px, 34px, #707070);
+  }
+  .styles {
+   
   }
 }
