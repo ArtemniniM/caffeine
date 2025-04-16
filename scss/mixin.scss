@@ -25,5 +25,16 @@
   color: $cl;
   text-align: $text-a;
 }
-@mixin coffee-styles-card($wdh, $hei) {
+@mixin arrow-back($width, $height, $rad, $bg-c, $shadow) {
+  width: $width;
+  height: $height;
+  border-radius: $rad;
+  background-color: $bg-c;
+  box-shadow: $shadow;
+}
+@mixin flex($dis, $js-c, $al-i, $gap) {
+  display: $dis;
+  justify-content: $js-c;
+  align-items: $al-i;
+  gap: $gap;
 }

@@ -15,29 +15,22 @@ header {
       @include text("Clicker Script", 400, 35px, 100%, #ffffff, start);
     }
     nav {
-      @extend %flex-spb-ai;
       gap: 40px;
+      @extend %flex-spb-ai;
       p {
         @include text("Playfair Display", 500, 14px, 100%, #ffffff, start);
       }
     }
     :nth-child(3) {
-      @extend %flex-spb-ai;
       gap: 35px;
+      @extend %flex-spb-ai;
       p {
-        @include text("Playfair Display", 500, 14px, 100%, #ffffff, start);
         text-decoration: underline;
         text-decoration-style: solid;
+        @include text("Playfair Display", 500, 14px, 100%, #ffffff, start);
       }
       button {
-        @include button(
-          100px,
-          48px,
-          #f9c06a,
-          24px,
-          500 14px "Playfair Display",
-          #1e1e1e
-        );
+        @include button(100px, 48px, #f9c06a, 24px, 500 14px "Playfair Display", #1e1e1e);
       }
     }
   }
@@ -67,14 +60,7 @@ header {
         @include text("Playfair Display", 400, 20px, 34px, #ffffff, start);
       }
       button {
-        @include button(
-          134px,
-          48px,
-          #f9c06a,
-          24px,
-          700 16px "Playfair Display",
-          #1e1e1e
-        );
+        @include button(134px, 48px, #f9c06a, 24px, 700 16px "Playfair Display", #1e1e1e);
       }
     }
   }
@@ -92,39 +78,15 @@ main {
       .left {
         max-width: 585px;
         h2 {
-          @include text(
-            "Playfair Display",
-            700,
-            54px,
-            100%,
-            $font-h-color,
-            start
-          );
+          @include text("Playfair Display", 700, 54px, 100%, $font-h-color, start);
         }
         p {
           padding: 29px 0;
-          @include text(
-            "Playfair Display",
-            400,
-            20px,
-            34px,
-            $font-p-color,
-            start
-          );
+          @include text("Playfair Display", 400, 20px, 34px, $font-p-color, start);
         }
         button {
-          @include button(
-            134px,
-            48px,
-            #f9c06a,
-            24px,
-            700 16px "Playfair Display",
-            #1e1e1e
-          );
+          @include button(134px, 48px, #f9c06a, 24px, 700 16px "Playfair Display", #1e1e1e);
         }
-      }
-      .right {
-        @include img(500px, 484px, cover, url(../images/coffee-cup.svg));
       }
     }
   }
@@ -139,34 +101,22 @@ main {
       margin: auto;
 
       h2 {
-        @include text(
-          "Playfair Display",
-          700,
-          54px,
-          100%,
-          $font-h-color,
-          center
-        );
+        @include text("Playfair Display", 700, 54px, 100%, $font-h-color, center);
       }
       p {
         padding: 16px 0 32px;
-
-        @include text(
-          "Playfair Display",
-          400,
-          20px,
-          34px,
-          $font-p-color,
-          center
-        );
+        @include text("Playfair Display", 400, 20px, 34px, $font-p-color, center);
       }
       .styles {
+        flex-wrap: wrap;
+        gap: 40px 20px;
         @extend %flex-spb-ai;
+
         .card {
           max-width: 280px;
           height: 28vh;
-          background-color: #fff9f1;
-          border: 1px solid #f9c06a6b;
+          background-color: $cards-color;
+          border: $cards-border;
           position: relative;
           .img1 {
             margin-bottom: 14px;
@@ -185,41 +135,20 @@ main {
             @include img(280px, 222px, cover, url(../images/Rectangle\ 13.png));
           }
           h3 {
-            @include text(
-              "Playfair Display",
-              700,
-              22px,
-              100%,
-              $font-h-color,
-              center
-            );
+            @include text("Playfair Display", 700, 22px, 100%, $font-h-color, center);
           }
           p {
             padding: 15px 0;
             @include text("Playfair Display", 400, 16px, 100%, #1e1e1e, center);
           }
           h4 {
-            @include text(
-              "Playfair Display",
-              700,
-              18px,
-              100%,
-              $font-h-color,
-              center
-            );
+            @include text("Playfair Display", 700, 18px, 100%, $font-h-color, center);
           }
           button {
             position: absolute;
             left: 73px;
-            bottom: -25px;
-            @include button(
-              134px,
-              48px,
-              #f9c06a,
-              24px,
-              700 16px "Playfair Display",
-              #1e1e1e
-            );
+            bottom: -($button-height/2);
+            @include button(134px, $button-height, #f9c06a, 24px, 700 16px "Playfair Display", #1e1e1e);
           }
         }
       }
@@ -236,106 +165,204 @@ main {
       margin: auto;
 
       h2 {
-        @include text(
-          "Playfair Display",
-          700,
-          54px,
-          100%,
-          $font-h-color#,
-          center
-        );
+        @include text("Playfair Display", 700, 54px, 100%, $font-h-color, center);
       }
       p {
         padding: 16px 0 32px;
-        @include text(
-          "Playfair Display",
-          400,
-          20px,
-          34px,
-          $font-p-color,
-          center
-        );
+        @include text("Playfair Display", 400, 20px, 34px, $font-p-color, center);
       }
       .items {
+        flex-wrap: wrap;
+        gap: 20px;
         @extend %flex-spb-ai;
-        h3 {
-          padding: 25px 0 15px;
-          @include text(
-            "Playfair Display",
-            700,
-            28px,
-            100%,
-            $font-h-color,
-            center
-          );
-        }
-        h5 {
-          @include text(
-            "Playfair Display",
-            400,
-            20px,
-            25px,
-            $font-p-color,
-            center
-          );
-        }
-        .supreme {
-          @extend %flex-col-ai-js;
+        .card {
           width: 280px;
           height: 284px;
-          background-color: #ffeed8;
-          .img {
+          background-color: $cards-color;
+          border: $cards-border;
+          @extend %flex-col-ai-js;
+          &.active {
+            background-color: #ffeed8;
+          }
+          .img1 {
             @include img(88px, 88px, cover, url(../images/coffee-beans\ 1.png));
           }
-        }
-        .quality {
-          @extend %flex-col-ai-js;
-          width: 280px;
-          height: 284px;
-          background-color: #fff9f1;
-          border: 1px solid #f9c06a6b;
-          .img {
+          .img2 {
             @include img(88px, 88px, cover, url(../images/badge\ 1.png));
           }
-        }
-        .extraordinary {
-          @extend %flex-col-ai-js;
-          width: 280px;
-          height: 284px;
-          background-color: #fff9f1;
-          border: 1px solid #f9c06a6b;
-          .img {
+          .img3 {
             @include img(88px, 88px, cover, url(../images/coffee-cup\ 1.png));
           }
-        }
-        .price {
-          @extend %flex-col-ai-js;
-          width: 280px;
-          height: 284px;
-          background-color: #fff9f1;
-          border: 1px solid #f9c06a6b;
-          .img {
+          .img4 {
             @include img(88px, 88px, cover, url(../images/best-price\ 1.png));
+          }
+          h3 {
+            padding: 25px 0 15px;
+            @include text("Playfair Display", 700, 28px, 100%, $font-h-color, center);
+          }
+          h5 {
+            @include text("Playfair Display", 400, 20px, 25px, $font-p-color, center);
           }
         }
       }
+      p:nth-child(4) {
+        padding: 32px 0 24px;
+      }
+      span {
+        @include text("Playfair Display", 700, 30px, 100%, $font-h-color, center);
+      }
+      button {
+        margin: auto;
+        @include button(134px, 48px, #f9c06a, 24px, 700 16px "Playfair Display", #1e1e1e);
+      }
     }
-    p:nth-child(4) {
-      padding: 32px 0 24px;
-    }
-    span {
-      @include text("Playfair Display", 700, 30px, 100%, $font-h-color, center);
-    }
-    button {
+  }
+  .coffee-beans {
+    width: 100%;
+    padding: 0 40px;
+    @include img(100%, 100%, cover, url(../images/bg\ coffee\ cup.png));
+    .wrapper {
+      max-width: 1180px;
       margin: auto;
-      @include button(
-        134px,
-        48px,
-        #f9c06a,
-        24px,
-        700 16px "Playfair Display",
-        #1e1e1e
-      );
+      padding: 55px 0;
+      gap: 225px;
+      @extend %flex-spb-ai;
+
+      .left {
+        max-width: 575px;
+        h2 {
+          @include text("Playfair Display", 700, 54px, 100%, $white-font-color, start);
+        }
+        p {
+          padding: 22px 0;
+          @include text("Playfair Display", 400, 20px, 34px, $white-font-color, start);
+        }
+        button {
+          @include button(134px, 48px, #f9c06a, 24px, 700 16px "Playfair Display", #1e1e1e);
+        }
+      }
+    }
+  }
+  .feedback {
+    width: 100%;
+    padding: 0 40px;
+    .wrapper {
+      max-width: 980px;
+      margin: auto;
+      padding: 82px 0 138px;
+      h2 {
+        @include text("Playfair Display", 700, 54px, 100%, $font-h-color, center);
+      }
+      h4 {
+        padding: 16px 0 45px;
+        @include text("Playfair Display", 400, 20px, 34px, $font-p-color, center);
+      }
+      .container {
+        max-width: 980px;
+        background-color: $cards-color;
+        border: $cards-border;
+        position: relative;
+        h2 {
+          padding: 54px 0 0 29px;
+          @include text("Playfair Display", 700, 220px, 112px, $font-h-color, start);
+        }
+        p {
+          padding: 0 100px 28px 100px;
+          @include text("Playfair Display", 600, 18px, 36px, $font-p-color, center);
+        }
+        h3 {
+          @include text("Playfair Display", 700, 32px, 100%, $font-h-color, center);
+        }
+        h4 {
+          padding: 4px 0 100px 0;
+          @include text("Playfair Display", 600, 18px, 36px, $font-p-color, center);
+        }
+        .left-arrow {
+          padding: 33px;
+          position: absolute;
+          top: 221px;
+          left: -41px;
+          @include arrow-back(82px, 82px, 16px, #f9c06a, 0px 6px 12px 0px #f9c06a38);
+        }
+        .right-arrow {
+          padding: 33px;
+          position: absolute;
+          right: -41px;
+          top: 221px;
+
+          @include arrow-back(82px, 82px, 16px, #f9c06a, 0px 6px 12px 0px #f9c06a38);
+        }
+        .jonny {
+          position: absolute;
+          left: 434px;
+          bottom: -56px;
+          @include img(112px, 112px, cover, url(../images/jonny.png));
+        }
+      }
+    }
+  }
+  .image {
+    width: 100%;
+    padding: 0 40px;
+    @include img(100%, 374px, cover, url(../images/bg\ coffee\ cup.png));
+  }
+}
+footer {
+  width: 100%;
+  padding: 0 40px;
+  @include img(100%, 100%, cover, url(../images/footer\ back\ 1.png));
+  .wrapper {
+    max-width: 1180px;
+    margin: auto;
+    padding: 160px 0 90px;
+    @include flex(flex, center, start, 66px);
+
+    .scene {
+      max-width: 380px;
+
+      h3 {
+        @include text("Clicker Script", 400, 54px, 100%, $white-font-color, start);
+      }
+      p {
+        padding: 20px 0;
+        @include text("Playfair Display", 400, 14px, 22px, $white-font-color, start);
+      }
+      .images {
+        @include flex(flex, start, center, 20px);
+        .face {
+          @include img(20px, 20px, cover, url(../images/facebook.svg));
+        }
+        .inst {
+          @include img(20px, 20px, cover, url(../images/inst.svg));
+        }
+        .youtube {
+          @include img(20px, 16px, cover, url(../images/youtube.svg));
+        }
+        .twit {
+          @include img(20px, 17px, cover, url(../images/twit.svg));
+        }
+      }
+    }
+    nav {
+      @include flex(flex, center, start, 66px);
+
+      div {
+        min-width: 136px;
+        &:last-child {
+          h4 {
+            padding-bottom: 37px;
+          }
+        }
+        h4 {
+          padding-bottom: 55px;
+          @include text("Playfair Display", 700, 26px, 100%, $white-font-color, start);
+        }
+
+        p {
+          padding-bottom: 22px;
+          @include text("Playfair Display", 400, 18px, 100%, $white-font-color, start);
+        }
+      }
     }
   }
 }
