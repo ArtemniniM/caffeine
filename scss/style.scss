@@ -114,7 +114,6 @@ main {
 
         .card {
           max-width: 280px;
-          height: 28vh;
           background-color: $cards-color;
           border: $cards-border;
           position: relative;
@@ -142,6 +141,7 @@ main {
             @include text("Playfair Display", 400, 16px, 100%, #1e1e1e, center);
           }
           h4 {
+            padding-bottom: 42px;
             @include text("Playfair Display", 700, 18px, 100%, $font-h-color, center);
           }
           button {

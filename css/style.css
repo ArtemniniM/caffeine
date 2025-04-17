@@ -228,7 +228,6 @@ main .coffee-styles .wrapper .styles {
 }
 main .coffee-styles .wrapper .styles .card {
   max-width: 280px;
-  height: 28vh;
   background-color: #fff9f1;
   border: 1px solid rgba(249, 192, 106, 0.4196078431);
   position: relative;
@@ -287,6 +286,7 @@ main .coffee-styles .wrapper .styles .card p {
   text-align: center;
 }
 main .coffee-styles .wrapper .styles .card h4 {
+  padding-bottom: 42px;
   font-family: "Playfair Display";
   font-weight: 700;
   font-size: 18px;
